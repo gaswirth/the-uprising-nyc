@@ -13,17 +13,15 @@
 			<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_post_thumbnail( 'grid-featured' ); ?></a>
 		<?php endif; ?>
 
+		<?php if ( get_post_type() == 'post' ) : ?>
+			<p class="entry-details"><span class="invisible">By <?php the_author(); ?> <span class="sep">&star;</span></span><?php the_time( 'n/j/y' ); ?></p>
+			<hr class="entry-details-sep" />
+		<?php endif; ?>
+
 		<h1 class="entry-title">
 			<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'rhd' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h1>
-		<?php if ( get_post_type() == 'post' ) : ?>
-			<p class="entry-details">By <?php the_author(); ?> <span class="sep">&star;</span> <?php the_time( 'n/j/y' ); ?></p>
-		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
 
 	<footer class="entry-meta">
 		<?php edit_post_link( __( 'Edit', 'rhd' ), '<span class="edit-link">', '</span>' ); ?>

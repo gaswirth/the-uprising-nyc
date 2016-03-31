@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 4:05:22 PM on 31-03-2016
+* RHD Dev: Compiled at 5:35:48 PM on 31-03-2016
 ***/
 
 .unselectable {
@@ -20,6 +20,9 @@
 .purple {
   background-color: #7a2f62;
   color: #fff;
+}
+.purple a {
+  color: #df5329;
 }
 .front-page #top-home .section-content .entry-content {
   width: 60%;

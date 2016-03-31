@@ -16,14 +16,6 @@ var isSingle = ( $body.hasClass('single') ) ? true : false,
 	isGrid = ( $main.hasClass('grid') === true ) ? true : false,
 	isPaged = $body.hasClass('paged');
 
-var $packery = jQuery(".blog-area #content"),
-	packeryIsActive = false;
-
-// wp_data object
-var homeUrl = wp_data.home_url,
-	themeDir = wp_data.theme_dir,
-	imgDir = wp_data.img_dir;
-
 var isFrontPage = ( $body.hasClass('front-page') === true ) ? true : false;
 var isMobile = ( $body.hasClass('mobile') === true ) ? true : false;
 var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
@@ -61,33 +53,7 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 		});
 
 		$.slidebars();
-
-		// Packery
-		if ( !isMobile && !isSingle )
-			packeryInit();
-
-		$(window).resize(function(){
-			if ( !isMobile && !isSingle ) {
-				if ( $(window).width() < 640 && packeryIsActive ) {
-					$packery.packery('destroy');
-					packeryIsActive = false;
-				} else
-					packeryInit();
-			}
-		});
 	});
-
-	function packeryInit() {
-		$packery.imagesLoaded( function(){
-			$packery.packery({
-				itemSelector: '.post',
-				percentPosition: true,
-				gutter: '.gutter-sizer'
-			});
-		});
-
-		packeryIsActive = true;
-	}
 })(jQuery);
 
 

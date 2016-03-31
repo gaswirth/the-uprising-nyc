@@ -7,7 +7,7 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class( 'donate-page' ); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'std-text-page' ); ?>>
 		<header class="entry-header">
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</header><!-- .entry-header -->

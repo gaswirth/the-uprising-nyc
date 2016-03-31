@@ -194,6 +194,51 @@ input[type="submit"]
 	width 100%
 	box-sizing border-box
 
+	&.green-top
+	&.purple-top
+	&.orange-top
+		.page
+			margin-top 0
+
+			.page-title
+				color white
+				margin 0
+				padding 2em 0 1em 0
+
+			section
+				&:first-of-type
+					.section-content
+						color white
+						padding-top 0 // override
+
+	&.green-top
+		.page
+			.page-title
+				background $green
+
+			section
+				&:first-of-type
+					background $green !important
+
+	&.purple-top
+		.page
+			.page-title
+				background $purple
+
+			section
+				&:first-of-type
+					background $purple !important
+
+	&.orange-top
+		.page
+			.page-title
+				background $orange
+
+			section
+				&:first-of-type
+					background $orange !important
+
+
 	section
 		position relative
 		padding 3em 0
@@ -481,6 +526,9 @@ input[type="submit"]
 				text-align center
 				margin-bottom 1em
 
+				img
+					border 2px solid black
+
 				.entry-title
 					margin 0 0 0.25rem 0
 
@@ -687,7 +735,7 @@ input[type="submit"]
 
 .text-button
 	text-align center
-	margin 3em auto 1em auto
+	margin 2em auto
 
 	a
 		padding 0.4em .8em
@@ -1037,7 +1085,7 @@ input[type="submit"]
 	Donate Page + Bloomerang Form
    ========================================================================== */
 
-.donate-page
+.std-text-page
 	margin-top 2em
 
 	input
@@ -1121,8 +1169,8 @@ input[type="submit"]
    ========================================================================== */
 
 .program-links
-	list-style none
-	padding-left 0
+	list-style none !important
+	padding-left 0 !important
 
 
 /* ==========================================================================
@@ -1254,15 +1302,24 @@ input[type="submit"]
 		#primary
 			#content
 				padding-top 2em
-				clearfix()
+				flexbox()
 
 			.post
 				width 47%
+				flexitem()
+				vertical-align top
 				transition all 0.25s
-				margin 0
+				margin 0 0 0 0.75em
 
-			.gutter-sizer
-				width 6%
+				.entry-details
+					padding-top 0.5em
+
+				.entry-details-sep
+					wrapper(0.5em, 0.5em, 20%)
+					height 2px
+					border none
+					background black
+
 
 	#footer-widget-area
 		.widget_rhd_mailchimp_widget

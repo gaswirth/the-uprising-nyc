@@ -13,10 +13,6 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<?php if ( !is_single() ) : ?>
-					<div class="gutter-sizer"></div>
-				<?php endif; ?>
-
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php
 						if ( is_single() ) get_template_part( 'content', 'single' );

@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 4:05:22 PM on 31-03-2016
+* RHD Dev: Compiled at 5:35:48 PM on 31-03-2016
 ***/
 
 .unselectable {
@@ -23,6 +23,10 @@
 #become-a-superhero #hero-unlock-your-superpower {
   background-color: #7a2f62;
   color: #fff;
+}
+.purple a,
+#become-a-superhero #hero-unlock-your-superpower a {
+  color: #df5329;
 }
 .hidden {
   display: none !important;
@@ -54,15 +58,13 @@
 .front-page #current-projects-home .projects-links:before,
 #who-we-are #who-founders .founder:before,
 #how-it-works-steps .section-content-flowchart:before,
-.blog #primary #content:before,
 .clearfix:after,
 .blog-area #main .post:after,
 .single .entry-content:after,
 .pagination:after,
 .front-page #current-projects-home .projects-links:after,
 #who-we-are #who-founders .founder:after,
-#how-it-works-steps .section-content-flowchart:after,
-.blog #primary #content:after {
+#how-it-works-steps .section-content-flowchart:after {
   content: " ";
   display: table;
 }
@@ -72,8 +74,7 @@
 .pagination:after,
 .front-page #current-projects-home .projects-links:after,
 #who-we-are #who-founders .founder:after,
-#how-it-works-steps .section-content-flowchart:after,
-.blog #primary #content:after {
+#how-it-works-steps .section-content-flowchart:after {
   clear: both;
 }
 * {
@@ -508,6 +509,42 @@ input[type="submit"]:hover {
   width: 100%;
   box-sizing: border-box;
 }
+#primary.green-top .page,
+#primary.purple-top .page,
+#primary.orange-top .page {
+  margin-top: 0;
+}
+#primary.green-top .page .page-title,
+#primary.purple-top .page .page-title,
+#primary.orange-top .page .page-title {
+  color: #fff;
+  margin: 0;
+  padding: 2em 0 1em 0;
+}
+#primary.green-top .page section:first-of-type .section-content,
+#primary.purple-top .page section:first-of-type .section-content,
+#primary.orange-top .page section:first-of-type .section-content {
+  color: #fff;
+  padding-top: 0;
+}
+#primary.green-top .page .page-title {
+  background: #51b47c;
+}
+#primary.green-top .page section:first-of-type {
+  background: #51b47c !important;
+}
+#primary.purple-top .page .page-title {
+  background: #7a2f62;
+}
+#primary.purple-top .page section:first-of-type {
+  background: #7a2f62 !important;
+}
+#primary.orange-top .page .page-title {
+  background: #df5329;
+}
+#primary.orange-top .page section:first-of-type {
+  background: #df5329 !important;
+}
 #primary section {
   position: relative;
   padding: 3em 0;
@@ -825,6 +862,9 @@ input[type="submit"]:hover {
   text-align: center;
   margin-bottom: 1em;
 }
+.blog-area #main .post .entry-header img {
+  border: 2px solid #000;
+}
 .blog-area #main .post .entry-header .entry-title {
   margin: 0 0 0.25rem 0;
 }
@@ -1017,7 +1057,7 @@ input[type="submit"]:hover {
    ========================================================================== */
 .text-button {
   text-align: center;
-  margin: 3em auto 1em auto;
+  margin: 2em auto;
 }
 .text-button a,
 #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input[type="submit"] {
@@ -1311,16 +1351,16 @@ input[type="submit"]:hover {
 /* ==========================================================================
 	Donate Page + Bloomerang Form
    ========================================================================== */
-.donate-page {
+.std-text-page {
   margin-top: 2em;
 }
-.donate-page input,
-.donate-page textarea {
+.std-text-page input,
+.std-text-page textarea {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 0.2em;
 }
-.donate-page input[type="submit"] {
+.std-text-page input[type="submit"] {
   border-radius: 0;
 }
 #post-111 {
@@ -1399,8 +1439,8 @@ input[type="submit"]:hover {
 	Extras
    ========================================================================== */
 .program-links {
-  list-style: none;
-  padding-left: 0;
+  list-style: none !important;
+  padding-left: 0 !important;
 }
 /* ==========================================================================
 	Media Queries
@@ -1537,14 +1577,31 @@ input[type="submit"]:hover {
   }
   .blog #primary #content {
     padding-top: 2em;
+    text-align: justify;
+  }
+  .blog #primary #content:after {
+    width: 100%;
+    display: inline-block;
+    content: '';
   }
   .blog #primary .post {
     width: 47%;
+    display: inline-block;
+    vertical-align: top;
     transition: all 0.25s;
-    margin: 0;
+    margin: 0 0 0 0.75em;
   }
-  .blog #primary .gutter-sizer {
-    width: 6%;
+  .blog #primary .post .entry-details {
+    padding-top: 0.5em;
+  }
+  .blog #primary .post .entry-details-sep {
+    width: 20%;
+    max-width: 64em;
+    position: relative;
+    margin: 0.5em auto 0.5em auto;
+    height: 2px;
+    border: none;
+    background: #000;
   }
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe {
     margin: 1em auto;
