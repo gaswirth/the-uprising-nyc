@@ -1,0 +1,133 @@
+/* ==========================================================================
+	Global Stylus Variables
+   ========================================================================== */
+
+// Variables
+$yellow = #facc21
+$green = #51b47c
+$orange = #df5329
+$purple = #7a2f62
+$dk-purple = #471b39
+$off-white = #e4e4e4
+$gray = #bababa
+$mast-ht = 4.5em
+$ff_body = 'Montserrat', sans-serif
+$blog-meta-ht-mobile = 9rem
+
+
+// Classes
+
+.unselectable
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none;
+	user-select: none;
+
+
+// Section colors
+
+.green
+	background-color $green
+	color white
+
+.orange
+	background-color $orange
+	color white
+
+.purple
+	background-color $purple
+	color white
+
+
+// Functions
+
+wrapper( $topMargin = false, $bottomMargin = false, $customWidth = false )
+	if $customWidth == false
+		width 80%
+	else
+		width $customWidth
+	max-width 64em
+	position relative
+
+	if $topMargin == false
+		$topMargin = 0
+	if $bottomMargin == false
+		$bottomMargin = 0
+
+	margin $topMargin auto $bottomMargin auto
+
+
+flexbox()
+	text-align justify
+
+	&:after
+		width 100%
+		display inline-block
+		content ''
+
+flexitem()
+	display inline-block
+
+
+clearfix()
+	@extends .clearfix
+
+
+columns( $num )
+	-webkit-column-count $num
+	-moz-column-count $num
+	column-count $num
+	-webkit-column-width $num / 100%
+	-moz-column-width $num / 100%
+	column-width $num / 100%
+	-webkit-column-gap 0.5rem
+	-moz-column-gap 0.5rem
+	column-gap 0.5rem
+
+
+body-shadow( $yPos )
+	box-shadow 0em $yPos 0.45em 0em rgba(0,0,0,0.5)
+
+
+opacity( $val )
+	-moz-opacity $val
+	-webkit-opacity $val
+	opacity $val
+
+
+placeholder-props( $famVal, $color, $opacity = null )
+	&::-webkit-input-placeholder
+		font-family $famVal
+		color $color
+		if $opacity != null
+			opacity( $opacity )
+
+	&:-moz-placeholder /* Firefox 18- */
+		font-family $famVal
+		color $color
+		if $opacity != null
+			opacity( $opacity )
+
+	&::-moz-placeholder  /* Firefox 19+ */
+		font-family $famVal
+		color $color
+		if $opacity != null
+			opacity( $opacity )
+
+	&:-ms-input-placeholder
+		font-family $famVal
+		color $color
+		if $opacity != null
+			opacity( $opacity )
+
+
+-transition($val)
+	-webkit-transition $val
+	transition $val
+
+
+-border-radius($val)
+	-webkit-border-radius $val
+	-moz-border-radius $val
+	border-radius $val
