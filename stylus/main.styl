@@ -327,6 +327,8 @@ input[type="submit"]
 
 
 .entry-content
+	line-height 1.5
+
 	p
 		margin-top 1em
 		margin-bottom 1em
@@ -355,6 +357,11 @@ input[type="submit"]
 		display block
 		margin 2em auto
 
+	hr
+		wrapper(1em, 1em, 75%)
+		height 2px
+		background $gray
+		border none
 
 .page
 	#primary
@@ -861,6 +868,20 @@ input[type="submit"]
 					margin 0
 					border-radius 0.2em
 
+	.entry-content
+		#our-programs-content
+		#our-partners-content
+			padding-left 0
+			list-style none
+			text-align center
+
+		#our-partners-content
+			a
+				color $orange
+
+			li
+				margin 1em 0
+
 
 /* ==========================================================================
 	Become A Hero
@@ -1096,6 +1117,15 @@ input[type="submit"]
 
 
 /* ==========================================================================
+	Extras
+   ========================================================================== */
+
+.program-links
+	list-style none
+	padding-left 0
+
+
+/* ==========================================================================
 	Media Queries
    ========================================================================== */
 
@@ -1257,6 +1287,17 @@ input[type="submit"]
 	#tribe-events-pg-template
 		margin-top 6.5rem
 
+	.program-links
+		flexbox()
+
+		li
+			width 30%
+			flexitem()
+
+			img
+				width 100%
+				height auto
+
 
 @media screen and (min-width 50em)
 	#who-we-are
@@ -1285,6 +1326,28 @@ input[type="submit"]
 						float left
 					&:last-child
 						float right
+
+		#our-programs-content
+		#our-partners-content
+			flexbox()
+
+			li
+				flexitem()
+				vertical-align top
+
+		#our-programs-content
+			li
+				width 30%
+				padding 0 2%
+
+				img
+					wrapper(0, 0, 90%)
+					height auto
+
+		#our-partners-content
+			li
+				width 48%
+				margin-bottom 0
 
 
 @media screen and (min-width 60em)

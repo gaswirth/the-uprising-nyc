@@ -175,7 +175,7 @@ register_nav_menu( 'primary', 'Main Site Navigation' );
 
 /**
  * RHD_Walker_Nav class.
- * 
+ *
  * @extends Walker_Nav_Menu
  */
 class RHD_Walker_Nav extends Walker_Nav_Menu {
@@ -426,7 +426,7 @@ function rhd_archive_pagination() {
  * @return void
  */
 function rhd_custom_wpautop( $content ) {
-if ( is_page() )
+if ( ! is_page_template( 'template-standard-text.php' ) )
 	return $content;
 else
 	return wpautop( $content );
