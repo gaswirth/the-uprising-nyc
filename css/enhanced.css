@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 5:35:48 PM on 31-03-2016
+* RHD Dev: Compiled at 1:27:59 PM on 01-04-2016
 ***/
 
 .unselectable {
@@ -23,6 +23,13 @@
 }
 .purple a {
   color: #df5329;
+}
+.teal {
+  background-color: #11b2b1;
+  color: #fff;
+}
+.yellow {
+  background-color: #fdb813;
 }
 .front-page #top-home .section-content .entry-content {
   width: 60%;

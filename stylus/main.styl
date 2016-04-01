@@ -194,49 +194,10 @@ input[type="submit"]
 	width 100%
 	box-sizing border-box
 
-	&.green-top
-	&.purple-top
-	&.orange-top
-		.page
-			margin-top 0
-
-			.page-title
-				color white
-				margin 0
-				padding 2em 0 1em 0
-
-			section
-				&:first-of-type
-					.section-content
-						color white
-						padding-top 0 // override
-
-	&.green-top
-		.page
-			.page-title
-				background $green
-
-			section
-				&:first-of-type
-					background $green !important
-
-	&.purple-top
-		.page
-			.page-title
-				background $purple
-
-			section
-				&:first-of-type
-					background $purple !important
-
-	&.orange-top
-		.page
-			.page-title
-				background $orange
-
-			section
-				&:first-of-type
-					background $orange !important
+	section
+		.section-content
+			&.no-pad
+				padding-top 0 !important
 
 
 	section
@@ -761,6 +722,7 @@ input[type="submit"]
 .green
 .orange
 .purple
+.teal
 	.text-button
 		a
 			border-color white
@@ -788,6 +750,18 @@ input[type="submit"]
 		a
 			&:hover
 				color $purple
+
+.teal
+	.text-button
+		a
+			&:hover
+				color $teal
+
+.yellow
+	.text-button
+		a
+			&:hover
+				color $yellow
 
 
 
@@ -1171,6 +1145,23 @@ input[type="submit"]
 .program-links
 	list-style none !important
 	padding-left 0 !important
+
+	li
+		img
+			border-width 3px
+			border-style solid
+			border-radius 0.3em
+			transition 0.25s background-color
+
+.green
+	.program-links
+		li
+			img
+				background-color rgba(255,255,255,0.5)
+				border-color black
+
+				&:hover
+					background-color white
 
 
 /* ==========================================================================

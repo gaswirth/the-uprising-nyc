@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 5:35:48 PM on 31-03-2016
+* RHD Dev: Compiled at 1:27:59 PM on 01-04-2016
 ***/
 
 .unselectable {
@@ -27,6 +27,13 @@
 .purple a,
 #become-a-superhero #hero-unlock-your-superpower a {
   color: #df5329;
+}
+.teal {
+  background-color: #11b2b1;
+  color: #fff;
+}
+.yellow {
+  background-color: #fdb813;
 }
 .hidden {
   display: none !important;
@@ -454,7 +461,7 @@ input[type="submit"]:hover {
 }
 #site-navigation-container #site-navigation li.menu-item-534 a:link,
 #site-navigation-container #site-navigation li.menu-item-534 a:visited {
-  color: #facc21;
+  color: #fdb813;
 }
 #site-navigation-container #site-navigation li a {
   text-decoration: none;
@@ -466,7 +473,7 @@ input[type="submit"]:hover {
 #site-navigation-container #site-navigation li a:hover,
 #site-navigation-container #site-navigation li a:active,
 #site-navigation-container #site-navigation li a:focus {
-  color: #facc21;
+  color: #fdb813;
 }
 .sb-right.sb-active {
   z-index: 999;
@@ -494,7 +501,7 @@ input[type="submit"]:hover {
 }
 .sb-right #site-navigation-sb .menu-item-534 a:link,
 .sb-right #site-navigation-sb .menu-item-534 a:visited {
-  color: #facc21;
+  color: #fdb813;
 }
 #page {
   background: url("../img/footer.jpg") no-repeat bottom right;
@@ -509,41 +516,8 @@ input[type="submit"]:hover {
   width: 100%;
   box-sizing: border-box;
 }
-#primary.green-top .page,
-#primary.purple-top .page,
-#primary.orange-top .page {
-  margin-top: 0;
-}
-#primary.green-top .page .page-title,
-#primary.purple-top .page .page-title,
-#primary.orange-top .page .page-title {
-  color: #fff;
-  margin: 0;
-  padding: 2em 0 1em 0;
-}
-#primary.green-top .page section:first-of-type .section-content,
-#primary.purple-top .page section:first-of-type .section-content,
-#primary.orange-top .page section:first-of-type .section-content {
-  color: #fff;
-  padding-top: 0;
-}
-#primary.green-top .page .page-title {
-  background: #51b47c;
-}
-#primary.green-top .page section:first-of-type {
-  background: #51b47c !important;
-}
-#primary.purple-top .page .page-title {
-  background: #7a2f62;
-}
-#primary.purple-top .page section:first-of-type {
-  background: #7a2f62 !important;
-}
-#primary.orange-top .page .page-title {
-  background: #df5329;
-}
-#primary.orange-top .page section:first-of-type {
-  background: #df5329 !important;
+#primary section .section-content.no-pad {
+  padding-top: 0 !important;
 }
 #primary section {
   position: relative;
@@ -1081,6 +1055,7 @@ input[type="submit"]:hover {
 .green .text-button a,
 .orange .text-button a,
 .purple .text-button a,
+.teal .text-button a,
 #become-a-superhero #hero-habit-of-giving .text-button a,
 #become-a-superhero #hero-out-of-your-way .text-button a,
 #become-a-superhero #hero-unlock-your-superpower .text-button a {
@@ -1089,6 +1064,7 @@ input[type="submit"]:hover {
 .green .text-button a:hover,
 .orange .text-button a:hover,
 .purple .text-button a:hover,
+.teal .text-button a:hover,
 #become-a-superhero #hero-habit-of-giving .text-button a:hover,
 #become-a-superhero #hero-out-of-your-way .text-button a:hover,
 #become-a-superhero #hero-unlock-your-superpower .text-button a:hover {
@@ -1105,6 +1081,12 @@ input[type="submit"]:hover {
 .purple .text-button a:hover,
 #become-a-superhero #hero-unlock-your-superpower .text-button a:hover {
   color: #7a2f62;
+}
+.teal .text-button a:hover {
+  color: #11b2b1;
+}
+.yellow .text-button a:hover {
+  color: #fdb813;
 }
 /* ==========================================================================
 	Widget Areas & Sidebars
@@ -1441,6 +1423,19 @@ input[type="submit"]:hover {
 .program-links {
   list-style: none !important;
   padding-left: 0 !important;
+}
+.program-links li img {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 0.3em;
+  transition: 0.25s background-color;
+}
+.green .program-links li img {
+  background-color: rgba(255,255,255,0.5);
+  border-color: #000;
+}
+.green .program-links li img:hover {
+  background-color: #fff;
 }
 /* ==========================================================================
 	Media Queries
