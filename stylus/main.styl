@@ -127,6 +127,21 @@ input[type="submit"]
 		li
 			flexitem()
 			margin 0 1em
+			position relative
+
+			.sub-menu
+				width 18em
+				display none
+				position absolute
+				left -1em
+				top 0
+				background #000
+				line-height 2
+				padding 1em 0
+
+				.menu-item
+					display block
+					text-align left
 
 			&.menu-item-534
 				a
@@ -1148,6 +1163,8 @@ input[type="submit"]
 	padding-left 0 !important
 
 	li
+		vertical-align top
+		
 		img
 			border-width 3px
 			border-style solid
@@ -1163,6 +1180,31 @@ input[type="submit"]
 
 				&:hover
 					background-color white
+
+.wdpu-msg-inner
+	.wdpu-head
+		text-align center
+		
+		.wdpu-title
+			font-size 2em
+		
+		.wdpu-subtitle
+			font-size 1.6em
+		
+	.wdpu-buttons
+		@extends .text-button
+		left 50%
+		-transform(translateX(-53.4%))
+		margin-top 0.5em
+		
+		.wdpu-cta
+			color black
+			margin-right 0 !important
+		
+		&:hover
+		&:active
+			.wdpu-cta
+				color white
 
 
 /* ==========================================================================
