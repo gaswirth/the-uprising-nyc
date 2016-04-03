@@ -36,7 +36,7 @@ function rhd_enqueue_styles(){
 	wp_register_style( 'rhd-main', RHD_THEME_DIR . '/css/main.css', array( 'slidebars' ), '1', 'all' );
 	wp_register_style( 'normalize', RHD_THEME_DIR . '/css/normalize.css', array( 'slidebars-js-css' ), null, 'all' );
 	wp_register_style( 'rhd-enhanced', RHD_THEME_DIR . '/css/enhanced.css', array(), '1', 'screen' );
-	wp_register_style( 'slidebars', RHD_THEME_DIR . '/js/vendor/slidebars/distribution/0.10.2/slidebars.min.css', array(), '0.10.2', 'screen' );
+	wp_register_style( 'slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.css', array(), null, 'screen' );
 
 	wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700' );
 
@@ -54,18 +54,9 @@ function rhd_enqueue_scripts() {
 	wp_register_script( 'modernizr', RHD_THEME_DIR . '/js/vendor/modernizr/modernizr-custom.js', null, '2.8.3', true );
 	wp_register_script( 'rhd-plugins', RHD_THEME_DIR . '/js/plugins.js', array( 'jquery' ), null, true );
 	wp_register_script( 'bloomerang-web-visits', '//api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_58cf2eb8-7027-11e4-b8ac-0a8b51b42b90', null, null, false );
-	wp_register_script( 'slidebars', RHD_THEME_DIR . '/js/vendor/slidebars/distribution/0.10.2/slidebars.min.js', array( 'jquery' ), '0.10.2', true );
-/*
-	wp_register_script( 'packery', RHD_THEME_DIR . '/js/vendor/packery/dist/packery.pkgd.min.js', array( 'jquery' ), null, true );
-	wp_register_script( 'imagesloaded', RHD_THEME_DIR . '/js/vendor/imagesloaded/imagesloaded.pkgd.min.js', array (), null, true );
-*/
+	wp_register_script( 'slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.js', array( 'jquery' ), null, true );
 
 	$main_deps = array( 'rhd-plugins', 'jquery', 'jquery-effects-core', 'slidebars', 'imagesloaded' );
-
-/*
-	if ( !rhd_is_mobile() )
-		$main_deps[] = 'packery';
-*/
 
 	wp_register_script( 'rhd-main', RHD_THEME_DIR . '/js/main.js', $main_deps, null, true );
 
@@ -76,18 +67,6 @@ function rhd_enqueue_scripts() {
 
 	if ( is_singular() )
 		wp_enqueue_script( 'comment-reply' );
-
-
-	// Localize data for client-side use
-	/*
-	$data = array(
-		'home_url' => home_url(),
-		'theme_dir' => RHD_THEME_DIR,
-		'img_dir' => RHD_IMG_DIR
-	);
-	wp_localize_script( 'rhd-plugins', 'wp_data', $data);
-	*/
-
 }
 add_action('wp_enqueue_scripts', 'rhd_enqueue_scripts');
 
