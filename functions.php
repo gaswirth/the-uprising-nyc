@@ -34,7 +34,7 @@ define( 'DISALLOW_FILE_EDIT', true );
 
 function rhd_enqueue_styles(){
 	wp_register_style( 'rhd-main', RHD_THEME_DIR . '/css/main.css', array( 'slidebars' ), '1', 'all' );
-	wp_register_style( 'normalize', RHD_THEME_DIR . '/css/normalize.css', array( 'slidebars-js-css' ), null, 'all' );
+	wp_register_style( 'normalize', RHD_THEME_DIR . '/css/normalize.css', array(), null, 'all' );
 	wp_register_style( 'rhd-enhanced', RHD_THEME_DIR . '/css/enhanced.css', array(), '1', 'screen' );
 	wp_register_style( 'slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.css', array(), null, 'screen' );
 
@@ -56,7 +56,7 @@ function rhd_enqueue_scripts() {
 	wp_register_script( 'bloomerang-web-visits', '//api.bloomerang.co/v1/WebsiteVisit?ApiKey=pub_58cf2eb8-7027-11e4-b8ac-0a8b51b42b90', null, null, false );
 	wp_register_script( 'slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.js', array( 'jquery' ), null, true );
 
-	$main_deps = array( 'rhd-plugins', 'jquery', 'jquery-effects-core', 'slidebars', 'imagesloaded' );
+	$main_deps = array( 'rhd-plugins', 'jquery', 'jquery-effects-core', 'slidebars' );
 
 	wp_register_script( 'rhd-main', RHD_THEME_DIR . '/js/main.js', $main_deps, null, true );
 

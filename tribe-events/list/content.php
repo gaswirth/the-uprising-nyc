@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="volunteer-link">
 		<p>Not seeing anything that's up your alley? Sign up to become a volunteer and we'll let you know what's coming up!</p>
 		<div class="text-button">
-			<a href="<?php echo home_url( '/volunteer' ); ?>" title="Volunteer">Volunteer</a>
+			<a href="<?php echo home_url( '/volunteer-hero-profile' ); ?>" title="Volunteer">Volunteer</a>
 		</div>
 	</div>
 

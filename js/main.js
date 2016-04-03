@@ -29,8 +29,6 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 	rhdInit();
 
 	$(document).ready(function(){
-		$.slidebars();
-
 		//custom blog bar dropdowns
 		$('.rhd-dropdown-title').click(function(e){
 			e.preventDefault();
@@ -53,6 +51,8 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 				}, 1000, 'easeInOutCubic');
 			}
 		});
+
+		$.slidebars();
 	});
 })(jQuery);
 
