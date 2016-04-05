@@ -1100,6 +1100,7 @@ input[type="submit"]
 
 #donation-form
 #email-registration-form
+#express-form
 	width 100%
 	margin 2em auto
 	text-align center
@@ -1114,6 +1115,7 @@ input[type="submit"]
 	select
 		font-size 1em
 		@extends #donation-form textarea
+		font-family $ff_body !important
 
 
 	.section
@@ -1164,7 +1166,7 @@ input[type="submit"]
 
 	li
 		vertical-align top
-		
+
 		img
 			border-width 3px
 			border-style solid
@@ -1184,23 +1186,23 @@ input[type="submit"]
 .wdpu-msg-inner
 	.wdpu-head
 		text-align center
-		
+
 		.wdpu-title
 			font-size 2em
-		
+
 		.wdpu-subtitle
 			font-size 1.6em
-		
+
 	.wdpu-buttons
 		@extends .text-button
 		left 50%
 		-transform(translateX(-53.4%))
 		margin-top 0.5em
-		
+
 		.wdpu-cta
 			color black
 			margin-right 0 !important
-		
+
 		&:hover
 		&:active
 			.wdpu-cta
@@ -1271,6 +1273,7 @@ input[type="submit"]
 
 	#donation-form
 	#email-registration-form
+	#express-form
 		width 50%
 		margin 0 auto
 

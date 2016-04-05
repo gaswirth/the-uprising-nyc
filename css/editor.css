@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 12:12:47 PM on 03-04-2016
+* RHD Dev: Compiled at 11:48:32 AM on 05-04-2016
 ***/
 
 /**
@@ -1344,52 +1344,66 @@ input[type="submit"]:hover {
   display: none;
 }
 #donation-form,
-#email-registration-form {
+#email-registration-form,
+#express-form {
   width: 100%;
   margin: 2em auto;
   text-align: center;
 }
 #donation-form h3,
-#email-registration-form h3 {
+#email-registration-form h3,
+#express-form h3 {
   font-size: 1.4em;
 }
 #donation-form textarea,
 #email-registration-form textarea,
+#express-form textarea,
 #donation-form input,
 #email-registration-form input,
+#express-form input,
 #donation-form select,
-#email-registration-form select {
+#email-registration-form select,
+#express-form select {
   max-width: 100%;
 }
 #donation-form input,
 #email-registration-form input,
+#express-form input,
 #donation-form select,
-#email-registration-form select {
+#email-registration-form select,
+#express-form select {
   font-size: 1em;
+  font-family: 'Montserrat', sans-serif !important;
 }
 #donation-form .section,
-#email-registration-form .section {
+#email-registration-form .section,
+#express-form .section {
   margin: 1em auto;
 }
 #donation-form .section .section-inst,
-#email-registration-form .section .section-inst {
+#email-registration-form .section .section-inst,
+#express-form .section .section-inst {
   margin: 0 auto 0.5em auto;
   font-style: italic;
 }
 #donation-form .section.donation .field,
-#email-registration-form .section.donation .field {
+#email-registration-form .section.donation .field,
+#express-form .section.donation .field {
   text-align: left;
 }
 #donation-form .section.custom-fields,
-#email-registration-form .section.custom-fields {
+#email-registration-form .section.custom-fields,
+#express-form .section.custom-fields {
   margin: 0.5em auto;
 }
 #donation-form .section .checkboxes,
-#email-registration-form .section .checkboxes {
+#email-registration-form .section .checkboxes,
+#express-form .section .checkboxes {
   margin: 0 auto;
 }
 #donation-form .btn-submit,
-#email-registration-form .btn-submit {
+#email-registration-form .btn-submit,
+#express-form .btn-submit {
   padding: 0.4em 0.8em;
   text-decoration: none;
   color: inherit;
@@ -1399,8 +1413,10 @@ input[type="submit"]:hover {
 }
 #donation-form .btn-submit:hover,
 #email-registration-form .btn-submit:hover,
+#express-form .btn-submit:hover,
 #donation-form .btn-submit:active,
-#email-registration-form .btn-submit:active {
+#email-registration-form .btn-submit:active,
+#express-form .btn-submit:active {
   background: #000;
   color: #fff;
 }
@@ -1518,7 +1534,8 @@ input[type="submit"]:hover {
     width: auto;
   }
   #donation-form,
-  #email-registration-form {
+  #email-registration-form,
+  #express-form {
     width: 50%;
     margin: 0 auto;
   }
