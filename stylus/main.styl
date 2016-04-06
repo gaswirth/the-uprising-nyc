@@ -54,7 +54,7 @@ textarea
 	border none
 	box-sizing border-box
 	padding 0.5em
-	font-family inherit
+	font-family $ff_body
 	-webkit-appearance none
 	-webkit-border-radius 0
 
@@ -349,6 +349,8 @@ input[type="submit"]
 	h3
 		font-size 1.6em
 
+		&.page-title
+			font-size 2em
 
 .entry-content
 	line-height 1.5
@@ -1092,10 +1094,6 @@ input[type="submit"]
 			border-radius 0
 
 
-
-#post-111
-	margin 2em auto
-
 #post-486
 	.recurring
 		display none
@@ -1367,12 +1365,14 @@ input[type="submit"]
 				margin 1em auto
 
 				input
+					font-family $ff_body
+
 					&[type="text"]
 					&[type="email"]
 						width 30.9%
 						margin-left 1%
 						display inline-block
-						font 1em $ff_body
+						font-size 1em
 
 						&:first-child
 							margin-left 0
@@ -1380,6 +1380,9 @@ input[type="submit"]
 					&[type="submit"]
 						display block
 						margin-top 0.75em
+
+				textarea
+					font-family $ff_body
 
 	#tribe-events-pg-template
 		margin-top 6.5rem

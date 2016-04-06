@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 11:56:11 AM on 05-04-2016
+* RHD Dev: Compiled at 11:43:59 AM on 06-04-2016
 ***/
 
 .unselectable {
@@ -389,7 +389,7 @@ textarea {
   border: none;
   box-sizing: border-box;
   padding: 0.5em;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
@@ -666,6 +666,10 @@ input[type="submit"]:hover {
 .section-content h3,
 .page-inner h3 {
   font-size: 1.6em;
+}
+.section-content h3.page-title,
+.page-inner h3.page-title {
+  font-size: 2em;
 }
 .entry-content {
   line-height: 1.5;
@@ -1367,9 +1371,6 @@ input[type="submit"]:hover {
 .std-text-page input[type="submit"] {
   border-radius: 0;
 }
-#post-111 {
-  margin: 2em auto;
-}
 #post-486 .recurring {
   display: none;
 }
@@ -1666,12 +1667,15 @@ input[type="submit"]:hover {
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe {
     margin: 1em auto;
   }
+  #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input {
+    font-family: 'Montserrat', sans-serif;
+  }
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input[type="text"],
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input[type="email"] {
     width: 30.9%;
     margin-left: 1%;
     display: inline-block;
-    font: 1em 'Montserrat', sans-serif;
+    font-size: 1em;
   }
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input[type="text"]:first-child,
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input[type="email"]:first-child {
@@ -1680,6 +1684,9 @@ input[type="submit"]:hover {
   #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe input[type="submit"] {
     display: block;
     margin-top: 0.75em;
+  }
+  #footer-widget-area .widget_rhd_mailchimp_widget .rhd_mc_subscribe textarea {
+    font-family: 'Montserrat', sans-serif;
   }
   #tribe-events-pg-template {
     margin-top: 6.5rem;

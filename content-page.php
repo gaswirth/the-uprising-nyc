@@ -7,11 +7,9 @@
  */
 ?>
 
-	<?php $hide_title = ( ! in_array( get_the_id(), array( 111, 115, 486, 167, 751, 753, 169 ) ) ) ? true : false; ?>
-
-	<article id="post-<?php the_ID(); ?>">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<h1 class="page-title <?php echo ( $hide_title ) ? 'invisible' : ''; ?>"><?php the_title(); ?></h1>
+			<h1 class="page-title invisible"><?php the_title(); ?></h1>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
