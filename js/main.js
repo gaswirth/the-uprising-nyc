@@ -55,11 +55,7 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 		// Nav hover
 		$("#site-navigation .menu-item-has-children").hover(function(){
 			$(this).children('.sub-menu').stop().fadeToggle('fast');
-		}/*
-, function(){
-			$(this).siblings('.sub-menu').fadeOut('fast');
-		}
-*/);
+		});
 
 		$.slidebars();
 	});

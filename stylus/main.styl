@@ -26,6 +26,7 @@ html
 
 body
 	@extends html
+	overflow hidden
 
 	&.admin-bar
 		#wpadminbar
@@ -54,7 +55,7 @@ textarea
 	border none
 	box-sizing border-box
 	padding 0.5em
-	font-family $ff_body
+	font-family $ff_body !important
 	-webkit-appearance none
 	-webkit-border-radius 0
 
@@ -1117,6 +1118,10 @@ input[type="submit"]
 		font-size 1em
 		@extends #donation-form textarea
 		font-family $ff_body !important
+
+	#street-address
+	#comment
+		height 6em
 
 
 	.section

@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 11:43:59 AM on 06-04-2016
+* RHD Dev: Compiled at 1:14:25 PM on 07-04-2016
 ***/
 
 /**
@@ -365,6 +365,9 @@ body {
   margin: 0;
   font: 16px 'Montserrat', sans-serif;
 }
+body {
+  overflow: hidden;
+}
 body.admin-bar #wpadminbar {
   position: fixed;
   top: 0;
@@ -389,7 +392,7 @@ textarea {
   border: none;
   box-sizing: border-box;
   padding: 0.5em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
@@ -1378,6 +1381,14 @@ input[type="submit"]:hover {
 #express-form select {
   font-size: 1em;
   font-family: 'Montserrat', sans-serif !important;
+}
+#donation-form #street-address,
+#email-registration-form #street-address,
+#express-form #street-address,
+#donation-form #comment,
+#email-registration-form #comment,
+#express-form #comment {
+  height: 6em;
 }
 #donation-form .section,
 #email-registration-form .section,
