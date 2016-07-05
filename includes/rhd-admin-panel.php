@@ -143,6 +143,22 @@ class RHD_Settings
 			'rhd-settings-admin', // Page
 			'rhd_donors_section' // Section
 		);
+		
+		add_settings_field(
+			'rhd_levelup_donors', // ID
+			'LevelUp Donors', // Title
+			array( $this, 'levelup_cb' ), // Callback
+			'rhd-settings-admin', // Page
+			'rhd_donors_section' // Section
+		);
+		
+		add_settings_field(
+			'rhd_swarm_donors', // ID
+			'SWARM Donors', // Title
+			array( $this, 'swarm_cb' ), // Callback
+			'rhd-settings-admin', // Page
+			'rhd_donors_section' // Section
+		);
 	}
 
 	/**
@@ -174,6 +190,12 @@ class RHD_Settings
 
 		if( isset( $input['rhd_volunteers'] ) )
 			$new_input['rhd_volunteers'] = $input['rhd_volunteers'];
+		
+		if( isset( $input['rhd_levelup_donors'] ) )
+			$new_input['rhd_levelup_donors'] = $input['rhd_levelup_donors'];
+		
+		if( isset( $input['rhd_swarm_donors'] ) )
+			$new_input['rhd_swarm_donors'] = $input['rhd_swarm_donors'];
 
 		return $new_input;
 	}
@@ -243,6 +265,20 @@ class RHD_Settings
 	{
 		echo '<textarea id="rhd_volunteers" name="rhd_theme_settings[rhd_volunteers]" rows="10" cols="40">'
 			. esc_textarea( $this->options['rhd_volunteers'] )
+			. '</textarea>';
+	}
+	
+	public function levelup_cb( $args )
+	{
+		echo '<textarea id="rhd_levelup_donors" name="rhd_theme_settings[rhd_levelup_donors]" rows="10" cols="40">'
+			. esc_textarea( $this->options['rhd_levelup_donors'] )
+			. '</textarea>';
+	}
+	
+	public function swarm_cb( $args )
+	{
+		echo '<textarea id="rhd_swarm_donors" name="rhd_theme_settings[rhd_swarm_donors]" rows="10" cols="40">'
+			. esc_textarea( $this->options['rhd_swarm_donors'] )
 			. '</textarea>';
 	}
 }

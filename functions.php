@@ -460,10 +460,10 @@ function rhd_donor_lists( $atts ) {
 		'rhd_leadership_gifts' => 'Leadership Gifts',
 		'rhd_recurring_donors' => 'Recurring Donors',
 		'rhd_one_time_donors' => 'One Time Donors',
-		'rhd_volunteers' => 'Volunteers'
+		'rhd_volunteers' => 'Volunteers',
+		'rhd_levelup_donors' => 'LevelUp Donors',
+		'rhd_swarm_donors' => 'SWARM Donors'
 	);
-
-	$i = 0;
 
 	$output = '<div class="donor-lists-container">';
 
@@ -471,8 +471,6 @@ function rhd_donor_lists( $atts ) {
 		$list = $options[$list_name];
 
 		if ( !empty( $list ) ) {
-			++$i;
-
 			$this_list = explode( "\n", $list );
 
 			if ( $this_list ) {
@@ -495,8 +493,9 @@ function rhd_donor_lists( $atts ) {
 
 				$list_out .= "</ul>\n";
 			}
+			
+			$output .= $list_out;
 		}
-		$output .= $list_out;
 	}
 
 	$output .= '</div><!-- .donor-lists-container -->';
