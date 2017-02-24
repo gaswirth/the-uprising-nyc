@@ -7,14 +7,12 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'rhd' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'rhd' ), 'after' => '</div>' ) ); ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div><!-- .entry-content -->
 
-		</div><!-- .entry-content -->
-
-		<footer class="entry-meta">
-			<?php edit_post_link( __( 'Edit', 'rhd' ), '<span class="edit-link">', '</span>' ); ?>
-		</footer><!-- .entry-meta -->
-	</article><!-- #post -->
+	<footer class="entry-meta">
+		<?php edit_post_link( __( 'Edit', 'rhd' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer><!-- .entry-meta -->
+</article><!-- #post -->

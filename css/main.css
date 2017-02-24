@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 1:14:25 PM on 07-04-2016
+* RHD Dev: Compiled at 6:13:37 PM on 24-02-2017
 ***/
 
 .unselectable {
@@ -65,13 +65,15 @@
 .front-page #current-projects-home .projects-links:before,
 #who-we-are #who-founders .founder:before,
 #how-it-works-steps .section-content-flowchart:before,
+#join-society-benefits li:before,
 .clearfix:after,
 .blog-area #main .post:after,
 .single .entry-content:after,
 .pagination:after,
 .front-page #current-projects-home .projects-links:after,
 #who-we-are #who-founders .founder:after,
-#how-it-works-steps .section-content-flowchart:after {
+#how-it-works-steps .section-content-flowchart:after,
+#join-society-benefits li:after {
   content: " ";
   display: table;
 }
@@ -81,7 +83,8 @@
 .pagination:after,
 .front-page #current-projects-home .projects-links:after,
 #who-we-are #who-founders .founder:after,
-#how-it-works-steps .section-content-flowchart:after {
+#how-it-works-steps .section-content-flowchart:after,
+#join-society-benefits li:after {
   clear: both;
 }
 * {
@@ -453,7 +456,7 @@ input[type="submit"]:hover {
   margin: 0;
   text-align: justify;
 }
-#site-navigation-container #site-navigation:after {
+#site-navigation-container #site-navigation::after {
   width: 100%;
   display: inline-block;
   content: '';
@@ -477,8 +480,8 @@ input[type="submit"]:hover {
   display: block;
   text-align: left;
 }
-#site-navigation-container #site-navigation li.menu-item-534 a:link,
-#site-navigation-container #site-navigation li.menu-item-534 a:visited {
+#site-navigation-container #site-navigation li.menu-item-1565 a:link,
+#site-navigation-container #site-navigation li.menu-item-1565 a:visited {
   color: #fdb813;
 }
 #site-navigation-container #site-navigation li a {
@@ -735,7 +738,7 @@ input[type="submit"]:hover {
 }
 .blog-area #blog-header #blog-meta-content li {
   width: 100%;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
   display: block;
 }
 .blog-area #blog-header #blog-meta-content li:last-child {
@@ -751,7 +754,6 @@ input[type="submit"]:hover {
   position: absolute;
   background-color: #bababa;
   top: 0;
-  right: 0;
   font-weight: 400;
   font-size: 1em;
   line-height: 1;
@@ -760,16 +762,20 @@ input[type="submit"]:hover {
 .blog-area #blog-header #blog-meta-content li .search-submit:hover,
 .blog-area #blog-header #blog-meta-content li .drop:active,
 .blog-area #blog-header #blog-meta-content li .search-submit:active {
-  background-color: #fff;
+  background-color: #df5329;
 }
 .blog-area #blog-header #blog-meta-content li .drop {
   width: 2em;
+  right: 0;
+}
+.blog-area #blog-header #blog-meta-content li .search-submit {
+  right: -0.5rem;
 }
 .blog-area #blog-header #blog-meta-content li .rhd-dropdown-title,
 .blog-area #blog-header #blog-meta-content li .search-field {
   width: 100%;
   height: 2rem;
-  padding-left: 0.5em;
+  padding: 0 0 0 0.5em;
   background: #fff;
   color: #bababa;
   position: relative;
@@ -1089,6 +1095,7 @@ input[type="submit"]:hover {
 #become-a-superhero #hero-out-of-your-way .text-button a,
 #become-a-superhero #hero-unlock-your-superpower .text-button a {
   border-color: #fff;
+  color: #fff;
 }
 .green .text-button a:hover,
 .orange .text-button a:hover,
@@ -1162,9 +1169,16 @@ input[type="submit"]:hover {
   font-size: 1.2em;
 }
 /* ==========================================================================
-	Front Page / Splash
+	Front Page / Splash + About Page + Mission Page
    ========================================================================== */
-.front-page #top-home {
+.front-page #top-home,
+.page-id-169 #top-home,
+.page-id-1525 #top-home,
+.page-id-1543 #top-home,
+.front-page #top,
+.page-id-169 #top,
+.page-id-1525 #top,
+.page-id-1543 #top {
   height: auto;
   background: url("../img/home-skyline.jpg") no-repeat bottom right;
   background-size: 50%;
@@ -1172,16 +1186,43 @@ input[type="submit"]:hover {
   padding: 0;
 }
 .front-page #top-home .section-content .entry-content,
-.front-page #top-home .page-inner .entry-content {
+.page-id-169 #top-home .section-content .entry-content,
+.page-id-1525 #top-home .section-content .entry-content,
+.page-id-1543 #top-home .section-content .entry-content,
+.front-page #top .section-content .entry-content,
+.page-id-169 #top .section-content .entry-content,
+.page-id-1525 #top .section-content .entry-content,
+.page-id-1543 #top .section-content .entry-content,
+.front-page #top-home .page-inner .entry-content,
+.page-id-169 #top-home .page-inner .entry-content,
+.page-id-1525 #top-home .page-inner .entry-content,
+.page-id-1543 #top-home .page-inner .entry-content,
+.front-page #top .page-inner .entry-content,
+.page-id-169 #top .page-inner .entry-content,
+.page-id-1525 #top .page-inner .entry-content,
+.page-id-1543 #top .page-inner .entry-content {
   width: 95%;
   margin: 0 auto;
   padding-bottom: 3em;
 }
-.front-page #top-home .top-logo {
+.front-page #top-home .top-logo,
+.page-id-169 #top-home .top-logo,
+.page-id-1525 #top-home .top-logo,
+.page-id-1543 #top-home .top-logo,
+.front-page #top .top-logo,
+.page-id-169 #top .top-logo,
+.page-id-1525 #top .top-logo,
+.page-id-1543 #top .top-logo {
   width: 14em;
   height: auto;
-  margin: 2em auto;
   display: block;
+}
+.page-id-1525 #top .section-content:first-of-type,
+.page-id-1543 #top .section-content:first-of-type {
+  padding-top: 0 !important;
+}
+.front-page #top-home .top-logo {
+  margin: 2em auto;
 }
 .front-page #problem-solution-home h3 {
   margin: 0;
@@ -1243,6 +1284,59 @@ input[type="submit"]:hover {
 }
 .front-page .entry-content #our-partners-content li {
   margin: 1em 0;
+}
+/* ==========================================================================
+	Mission (new)
+   ========================================================================== */
+#five-steps ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2em;
+}
+#five-steps ol li {
+  counter-increment: step-counter;
+  text-align: center;
+}
+#five-steps ol li::before {
+  content: counter(step-counter);
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+  top: 0.18em;
+  line-height: 1.1;
+}
+#five-steps ol li .step-content {
+  margin-top: 0;
+}
+#five-steps ol li:nth-of-type(1)::before {
+  color: #fdb813;
+}
+#five-steps ol li:nth-of-type(1) .block-title-content {
+  background: #fdb813;
+}
+#five-steps ol li:nth-of-type(2)::before {
+  color: #11b2b1;
+}
+#five-steps ol li:nth-of-type(2) .block-title-content {
+  background: #11b2b1;
+}
+#five-steps ol li:nth-of-type(3)::before {
+  color: #df5329;
+}
+#five-steps ol li:nth-of-type(3) .block-title-content {
+  background: #df5329;
+}
+#five-steps ol li:nth-of-type(4)::before {
+  color: #7a2f62;
+}
+#five-steps ol li:nth-of-type(4) .block-title-content {
+  background: #7a2f62;
+}
+#five-steps ol li:nth-of-type(5)::before {
+  color: #51b47c;
+}
+#five-steps ol li:nth-of-type(5) .block-title-content {
+  background: #51b47c;
 }
 /* ==========================================================================
 	Become A Hero
@@ -1513,6 +1607,83 @@ input[type="submit"]:hover {
 .wdpu-msg-inner .wdpu-buttons:active .wdpu-cta {
   color: #fff;
 }
+#past-projects .section-title {
+  text-align: center;
+}
+#past-projects .past-projects-list {
+  text-align: justify;
+  padding-left: 0;
+  text-align: center;
+}
+#past-projects .past-projects-list::after {
+  width: 100%;
+  display: inline-block;
+  content: '';
+}
+#past-projects .past-projects-list .past-project {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+}
+#past-projects .past-projects-list .past-project:nth-of-type(odd) {
+  margin-right: 1%;
+}
+#past-projects .past-projects-list .past-project:nth-of-type(even) {
+  margin-left: 1%;
+}
+#past-projects .past-projects-list .past-project .entry-title {
+  font-size: 1.2em;
+}
+#past-projects .past-projects-list .past-project .wp-post-image {
+  width: 100%;
+  height: auto;
+}
+.nf-form-title {
+  text-align: center;
+}
+#join-society-benefits {
+  width: 80%;
+  max-width: 64em;
+  position: relative;
+  margin: 0 auto 0 auto;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+#join-society-benefits li {
+  margin-bottom: 1em;
+}
+#join-society-benefits li:nth-of-type(1) .block-title-content {
+  background: #df5329;
+}
+#join-society-benefits li:nth-of-type(2) .block-title-content {
+  background: #fdb813;
+}
+#join-society-benefits li:nth-of-type(3) .block-title-content {
+  background: #11b2b1;
+}
+#join-society-benefits li .block-title {
+  margin-top: 0.25rem;
+  text-transform: none;
+}
+#join-society-benefits li p {
+  margin-top: 0;
+}
+#join-society-benefits li img {
+  margin-top: 0.5em !important;
+}
+.block-title {
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.block-title .block-title-content {
+  width: auto;
+  display: inline-block;
+  padding: 0.3rem;
+  font-size: 1.1em;
+}
 /* ==========================================================================
 	Media Queries
    ========================================================================== */
@@ -1534,7 +1705,7 @@ input[type="submit"]:hover {
     text-align: justify;
     top: 0.85em;
   }
-  .blog-area #blog-header #blog-meta-content:after {
+  .blog-area #blog-header #blog-meta-content::after {
     width: 100%;
     display: inline-block;
     content: '';
@@ -1651,7 +1822,7 @@ input[type="submit"]:hover {
     padding-top: 2em;
     text-align: justify;
   }
-  .blog #primary #content:after {
+  .blog #primary #content::after {
     width: 100%;
     display: inline-block;
     content: '';
@@ -1705,7 +1876,7 @@ input[type="submit"]:hover {
   .program-links {
     text-align: justify;
   }
-  .program-links:after {
+  .program-links::after {
     width: 100%;
     display: inline-block;
     content: '';
@@ -1717,6 +1888,44 @@ input[type="submit"]:hover {
   .program-links li img {
     width: 100%;
     height: auto;
+  }
+  #past-projects {
+    width: 80%;
+    max-width: 64em;
+    position: relative;
+    margin: 0 auto 0 auto;
+  }
+  #past-projects .past-projects-list .past-project {
+    width: 23%;
+    margin: 0 1%;
+  }
+  #join-society-benefits {
+    width: 65%;
+  }
+  #join-society-benefits li {
+    text-align: left;
+  }
+  #join-society-benefits li .block-content {
+    width: 64%;
+    float: right;
+    margin-top: 1em;
+  }
+  #join-society-benefits li .block-title {
+    margin-bottom: 1em;
+  }
+  #join-society-benefits li img {
+    width: 33%;
+    height: auto;
+    display: block;
+    float: left;
+  }
+  #join-society-benefits li:nth-of-type(1) .block-title {
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  #join-society-benefits li:nth-of-type(3) .block-title {
+    -webkit-transform: rotate(1.5deg);
+    transform: rotate(1.5deg);
   }
 }
 @media screen and (min-width: 50em) {
@@ -1736,7 +1945,7 @@ input[type="submit"]:hover {
   .shield-buttons {
     text-align: justify;
   }
-  .shield-buttons:after {
+  .shield-buttons::after {
     width: 100%;
     display: inline-block;
     content: '';
@@ -1760,8 +1969,8 @@ input[type="submit"]:hover {
   .front-page #our-partners-content {
     text-align: justify;
   }
-  .front-page #our-programs-content:after,
-  .front-page #our-partners-content:after {
+  .front-page #our-programs-content::after,
+  .front-page #our-partners-content::after {
     width: 100%;
     display: inline-block;
     content: '';
@@ -1798,6 +2007,41 @@ input[type="submit"]:hover {
     -webkit-column-gap: 0.5rem;
     -moz-column-gap: 0.5rem;
     column-gap: 0.5rem;
+  }
+  #five-steps ol {
+    width: 100%;
+    height: 17em;
+    text-align: justify;
+  }
+  #five-steps ol::after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+  }
+  #five-steps ol li {
+    width: 17%;
+    height: 100%;
+    display: inline-block;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+  #five-steps ol li .block-title {
+    overflow: visible;
+    position: absolute;
+    top: 4.3rem;
+  }
+  #five-steps ol li .step-content {
+    width: 85%;
+    height: 65%;
+    margin-top: 0.5em;
+    line-height: 1.3;
+    font-size: 0.9em;
+    border-left: 1px solid #bababa;
+    padding: 0.5em 0 0 0.5em;
+    display: inline-block;
+    position: relative;
+    left: 1.5em;
   }
 }
 @media screen and (min-width: 77em) {

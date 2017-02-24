@@ -144,7 +144,7 @@ input[type="submit"]
 					display block
 					text-align left
 
-			&.menu-item-534
+			&.menu-item-1565
 				a
 					&:link
 					&:visited
@@ -414,7 +414,7 @@ input[type="submit"]
 
 			li
 				width 100%
-				margin-bottom 0.5em
+				margin-bottom 0.5rem
 				display block
 
 				&:last-child
@@ -429,23 +429,26 @@ input[type="submit"]
 					position absolute
 					background-color $gray
 					top 0
-					right 0
 					font-weight 400
 					font-size 1em
 					line-height 1
 
 					&:hover
 					&:active
-						background-color white
+						background-color $orange
 
 				.drop
 					width 2em
+					right 0
+
+				.search-submit
+					right -0.5rem
 
 				.rhd-dropdown-title
 				.search-field
 					width 100%
 					height 2rem
-					padding-left 0.5em
+					padding 0 0 0 0.5em
 					background white
 					color $gray
 					position relative
@@ -748,6 +751,7 @@ input[type="submit"]
 	.text-button
 		a
 			border-color white
+			color white
 
 			&:hover
 				background-color white
@@ -831,11 +835,15 @@ input[type="submit"]
 
 
 /* ==========================================================================
-	Front Page / Splash
+	Front Page / Splash + About Page + Mission Page
    ========================================================================== */
 
 .front-page
+.page-id-169 // about
+.page-id-1525 // mission
+.page-id-1543 // impact
 	#top-home
+	#top
 		height auto
 		background url(../img/home-skyline.jpg) no-repeat bottom right
 		background-size 50%
@@ -852,9 +860,21 @@ input[type="submit"]
 		.top-logo
 			width 14em
 			height auto
-			margin 2em auto
 			display block
 
+
+.page-id-1525
+.page-id-1543
+	#top
+		.section-content
+			&:first-of-type
+				padding-top 0 !important
+
+
+.front-page
+	#top-home
+		.top-logo
+			margin 2em auto
 
 	#problem-solution-home
 		h3
@@ -926,6 +946,68 @@ input[type="submit"]
 			li
 				margin 1em 0
 
+
+/* ==========================================================================
+	Mission (new)
+   ========================================================================== */
+
+#five-steps
+	-wrapper($customWidth: 66%)
+
+	ol
+		list-style-type none
+		padding-left 0
+		margin-bottom 2em
+
+		li
+			counter-increment step-counter
+			text-align center
+
+			&::before
+				content counter(step-counter)
+				font-size 5rem
+				font-weight bold
+				position relative
+				top 0.18em
+				line-height 1.1
+
+			.step-content
+				margin-top 0
+
+			&:nth-of-type(1)
+				&::before
+					color $yellow
+
+				.block-title-content
+					background $yellow
+
+			&:nth-of-type(2)
+				&::before
+					color $teal
+
+				.block-title-content
+					background $teal
+
+			&:nth-of-type(3)
+				&::before
+					color $orange
+
+				.block-title-content
+					background $orange
+
+			&:nth-of-type(4)
+				&::before
+					color $purple
+
+				.block-title-content
+					background $purple
+
+			&:nth-of-type(5)
+				&::before
+					color $green
+
+				.block-title-content
+					background $green
 
 /* ==========================================================================
 	Become A Hero
@@ -1215,6 +1297,84 @@ input[type="submit"]
 				color white
 
 
+#past-projects
+	.section-title
+		text-align center
+
+	.past-projects-list
+		flexbox()
+		padding-left 0
+		text-align center
+
+		.past-project
+			width 48%
+			flexitem()
+			vertical-align top
+
+			&:nth-of-type(odd)
+				margin-right 1%
+
+			&:nth-of-type(even)
+				margin-left 1%
+
+			.entry-title
+				font-size 1.2em
+
+			.wp-post-image
+				width 100%
+				height auto
+
+
+.nf-form-title
+	text-align center
+
+
+#join-society-benefits
+	wrapper()
+	list-style none
+	padding-left 0
+	text-align center
+
+	li
+		margin-bottom 1em
+
+		&:nth-of-type(1)
+			.block-title-content
+				background $orange
+
+		&:nth-of-type(2)
+			.block-title-content
+				background $yellow
+
+		&:nth-of-type(3)
+			.block-title-content
+				background $teal
+
+		.block-title
+			margin-top 0.25rem
+			text-transform none
+
+		p
+			margin-top 0
+
+		img
+			-wrapper()
+			margin-top 0.5em !important
+
+
+.block-title
+	text-transform uppercase
+	color white
+	display inline-block
+	margin-bottom 0.5rem
+
+	.block-title-content
+		width auto
+		display inline-block
+		padding 0.3rem
+		font-size 1.1em
+
+
 /* ==========================================================================
 	Media Queries
    ========================================================================== */
@@ -1403,6 +1563,43 @@ input[type="submit"]
 				width 100%
 				height auto
 
+	#past-projects
+		wrapper()
+
+		.past-projects-list
+			.past-project
+				width 23%
+				margin 0 1%
+
+	#join-society-benefits
+		width 65%
+
+		li
+			clearfix()
+			text-align left
+
+			.block-content
+				width 64%
+				float right
+				margin-top 1em
+
+			.block-title
+				margin-bottom 1em
+
+			img
+				width 33%
+				height auto
+				display block
+				float left
+
+			&:nth-of-type(1)
+				.block-title
+					-transform(rotate(-3deg))
+
+			&:nth-of-type(3)
+				.block-title
+					-transform(rotate(1.5deg))
+
 
 @media screen and (min-width 50em)
 	#who-we-are
@@ -1460,6 +1657,37 @@ input[type="submit"]
 		#donor-list
 			.donor-lists-container
 				columns(4)
+
+	#five-steps
+		ol
+			width 100%
+			height 17em
+			flexbox()
+
+			li
+				width 17%
+				height 100%
+				flexitem()
+				display inline-block
+				vertical-align top
+				text-align left
+
+				.block-title
+					overflow visible
+					position absolute
+					top 4.3rem
+
+				.step-content
+					width 85%
+					height 65%
+					margin-top 0.5em
+					line-height 1.3
+					font-size 0.9em
+					border-left 1px solid $gray
+					padding 0.5em 0 0 0.5em
+					display inline-block
+					position relative
+					left 1.5em
 
 
 @media screen and (min-width 77em)

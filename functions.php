@@ -195,6 +195,7 @@ add_theme_support( 'automatic-feed-links' );
 
 function rhd_image_sizes(){
 	add_image_size( 'grid-featured', 482, 240, true );
+	add_image_size( 'square', 300, 300, true );
 }
 add_action( 'after_setup_theme', 'rhd_image_sizes' );
 
@@ -569,3 +570,116 @@ remove_filter( 'oembed_request_post_id', $pro_callback );
 }
 
 add_action( 'init', 'undo_recurrence_oembed_logic' );
+
+
+/* ==========================================================================
+	Export scripts
+   ========================================================================== */
+
+ function rhd_display_table() {
+	 $args = array(
+		'post_type' => 'nf_sub',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	);
+
+	$q = new WP_Query( $args );
+	$output = '';
+
+	$serial = 'a:14:{i:0;a:2:{s:5:"order";i:1;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:9:"textbox_5";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:10:"lastname_6";}s:5:"width";i:50;}}}i:1;a:2:{s:5:"order";i:2;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:8:"email_13";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:5:"phone";}s:5:"width";i:50;}}}i:2;a:2:{s:5:"order";i:3;s:5:"cells";a:1:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:7:"address";}s:5:"width";s:3:"100";}}}i:3;a:2:{s:5:"order";i:6;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:10:"textbox_45";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:10:"textbox_46";}s:5:"width";i:50;}}}i:4;a:2:{s:5:"order";i:7;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:10:"textbox_11";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:10:"textbox_12";}s:5:"width";i:50;}}}i:5;a:2:{s:5:"order";i:9;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:86:"how_many_people_in_your_immediate_family_however_you_define_that_have_attended_college";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:2;s:6:"fields";a:1:{i:0;s:29:"do_you_plan_to_attend_college";}s:5:"width";i:50;}}}i:6;a:2:{s:5:"order";i:11;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:66:"what_is_at_least_one_school_that_you_are_interested_in_applying_to";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:53:"what_extracurricular_activities_do_you_participate_in";}s:5:"width";i:50;}}}i:7;a:2:{s:5:"order";i:13;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:48:"are_you_currently_or_have_you_ever_been_employed";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:75:"what_do_you_think_you_need_to_know_in_order_to_thrive_in_college_and_beyond";}s:5:"width";i:50;}}}i:8;a:2:{s:5:"order";i:15;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:65:"who_are_the_first_3_people_you_go_to_for_support_in_times_of_need";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:42:"who_is_your_favorite_superhero_-_and_why_1";}s:5:"width";i:50;}}}i:9;a:2:{s:5:"order";i:17;s:5:"cells";a:1:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:11:"textarea_14";}s:5:"width";s:3:"100";}}}i:10;a:2:{s:5:"order";i:18;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:109:"i_am_available_all_day_9am_-_5_30pm_on_saturday_october_15_and_am_interested_in_attending_personal_leadership";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:110:"i_am_available_all_day_9am_-_5_30pm_on_sunday_october_16_and_am_interested_in_attending_creative_collaboration";}s:5:"width";i:50;}}}i:11;a:2:{s:5:"order";i:20;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:101:"i_can_provide_my_own_transportation_to_midtown_manhattan_520_eighth_ave_between_36th_and_37th_streets";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:0:{}s:5:"width";i:50;}}}i:12;a:2:{s:5:"order";i:21;s:5:"cells";a:2:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:79:"do_you_participate_in_the_free_or_reduced_lunch_program_at_your_school_optional";}s:5:"width";i:50;}i:1;a:3:{s:5:"order";i:1;s:6:"fields";a:1:{i:0;s:54:"racial_ethnic_identity_optional_-_check_all_that_apply";}s:5:"width";i:50;}}}i:13;a:2:{s:5:"order";i:23;s:5:"cells";a:1:{i:0;a:3:{s:5:"order";i:0;s:6:"fields";a:1:{i:0;s:9:"submit_10";}s:5:"width";s:3:"100";}}}}';
+
+	$form_data = unserialize_recursive($serial);
+
+	echo str_replace(array('&lt;?php&nbsp;','?&gt;'), '', highlight_string( '<?php ' . var_export($form_data, true) . ' ?>', true ) );
+
+	if ( $q->have_posts() ) {
+		$output = '<table id="export-table">';
+
+		while ( $q->have_posts() ) {
+			$q->the_post();
+			$data = get_post_meta( get_the_ID() );
+
+			$output .= "<tr>";
+
+			foreach ( $data as $cell ) {
+				$output .= "<td>{$cell[0]}</td>";
+			}
+
+			$output .= "</tr>";
+		}
+
+		$output .= '</table>';
+	}
+
+	echo $output;
+ }
+
+
+ // Next two functions taken from a commenter on http://php.net/manual/en/function.unserialize.php
+function unserialize_recursive($val) {
+	//$pattern = "/.*\{(.*)\}/";
+	if(is_serialized($val)){
+		$val = trim($val);
+		$ret = unserialize($val);
+		if (is_array($ret)) {
+			foreach($ret as &$r) $r = unserialize_recursive($r);
+		}
+		return $ret;
+	} elseif (is_array($val)) {
+		foreach($val as &$r) $r = unserialize_recursive($r);
+		return $val;
+	} else { return $val; }
+}
+
+
+/* ==========================================================================
+	Shortcodes
+   ========================================================================== */
+
+/**
+ * rhd_color_block_shortcode function.
+ *
+ * @access public
+ * @param mixed $atts
+ * @param mixed $content (default: null)
+ * @return void
+ */
+function rhd_past_projects_shortcode( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'num_posts' => '',
+	), $atts );
+
+	extract($a);
+
+	$num_posts = ( $num_posts === '' ) ? 4 : $num_posts;
+
+	$args = array(
+		'post_type' => 'post',
+		'cat' => 11,
+		'posts_per_page' => $num_posts
+	);
+
+	$past_proj = get_posts( $args );
+
+	if ( $past_proj ) {
+		$output = '<h2 class="section-title">Past Projects</h2>';
+		$output .= '<ul class="past-projects-list">';
+
+		foreach ( $past_proj as $proj ) {
+			setup_postdata( $GLOBALS['post'] =& $proj );
+
+			$output .= '<li class="past-project">';
+
+			if ( has_post_thumbnail() )
+				$output .= '<a href="' . get_the_permalink() . '" rel="bookmark">' . get_the_post_thumbnail( get_the_id(), 'square' ) . '</a>';
+
+			$output .= '<a href="' . get_the_permalink() . '" rel="bookmark"><h3 class="entry-title">' . get_the_title() . '</h3></a>';
+			$output .= '</li><!-- .past-project -->';
+		}
+
+		$output .= '</ul><!-- #past-projects -->';
+	}
+
+	return $output;
+}
+add_shortcode( 'past-projects', 'rhd_past_projects_shortcode' );
