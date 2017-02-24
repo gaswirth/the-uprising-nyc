@@ -38,6 +38,11 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 
 			$dd.slideToggle();
 		});
+		
+		// Resize actions
+		$(window).resize(function(){
+			shortenDonateButtonText();
+		});
 
 		// Nav actions
 		$navItem.click(function(e){
@@ -62,6 +67,9 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 		$("#export").click(function(){
 			$("#export-table").tableToCSV();
 		});
+		
+		// Hacks!
+		shortenDonateButtonText();
 	});
 })(jQuery);
 
@@ -72,6 +80,26 @@ var isTablet = ( $body.hasClass('tablet') === true ) ? true : false;
 
 function rhdInit() {
 	//wpadminbarPush();
+}
+
+
+function shortenDonateButtonText() {
+	if ( jQuery(window).width() <= 640 ) {
+		jQuery(".text-button a").each(function(){
+			if ( jQuery(this).text().indexOf('DONATE NOW') > -1 ) {
+				if ( !jQuery(this).attr('data-origText') )
+					jQuery(this).attr('data-origtext', jQuery(this).text());
+				
+				jQuery(this).text("DONATE NOW");
+			}
+		});
+	} else {
+		jQuery(".text-button a").each(function(){
+			if ( jQuery(this).attr('data-origText') ) {
+				jQuery(this).text( jQuery(this).attr('data-origText') );
+			}
+		});
+	}
 }
 
 
