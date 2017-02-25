@@ -869,6 +869,9 @@ input[type="submit"]
 		.section-content
 			&:first-of-type
 				padding-top 0 !important
+			
+			.wp-image-572
+				padding 3em 0
 
 
 .front-page
@@ -1298,31 +1301,16 @@ input[type="submit"]
 
 
 #past-projects
+	wrapper()
+	
 	.section-title
 		text-align center
-
-	.past-projects-list
-		flexbox()
-		padding-left 0
-		text-align center
-
-		.past-project
-			width 48%
-			flexitem()
-			vertical-align top
-
-			&:nth-of-type(odd)
-				margin-right 1%
-
-			&:nth-of-type(even)
-				margin-left 1%
-
-			.entry-title
-				font-size 1.2em
-
-			.wp-post-image
-				width 100%
-				height auto
+	
+	.entry-header
+		@extends .blog-area #main .post .entry-header
+		
+		.entry-title
+			@extends .blog-area #main .post .entry-header .entry-title
 
 
 .nf-form-title
@@ -1564,12 +1552,23 @@ input[type="submit"]
 				height auto
 
 	#past-projects
-		wrapper()
-
 		.past-projects-list
-			.past-project
-				width 23%
-				margin 0 1%
+			flexbox()
+	
+			.post
+				flexitem()
+				vertical-align top
+				transition all 0.25s
+				margin 0 0 0 0.75em
+
+				.entry-details
+					padding-top 0.5em
+
+				.entry-details-sep
+					wrapper(0.5em, 0.5em, 20%)
+					height 2px
+					border none
+					background black
 
 	#join-society-benefits
 		width 65%

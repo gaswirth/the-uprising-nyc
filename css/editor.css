@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 6:13:37 PM on 24-02-2017
+* RHD Dev: Compiled at 10:47:27 PM on 24-02-2017
 ***/
 
 /**
@@ -860,21 +860,26 @@ input[type="submit"]:hover {
 .blog-area #blog-header #blog-meta-content li .rhd-dropdown ul li a:active {
   color: #df5329;
 }
-.blog-area #main .post .entry-header {
+.blog-area #main .post .entry-header,
+#past-projects .entry-header {
   text-align: center;
   margin-bottom: 1em;
 }
-.blog-area #main .post .entry-header img {
+.blog-area #main .post .entry-header img,
+#past-projects .entry-header img {
   border: 2px solid #000;
 }
-.blog-area #main .post .entry-header .entry-title {
+.blog-area #main .post .entry-header .entry-title,
+#past-projects .entry-header .entry-title {
   margin: 0 0 0.25rem 0;
   font-size: 1.7em;
 }
-.blog-area #main .post .entry-header .entry-details {
+.blog-area #main .post .entry-header .entry-details,
+#past-projects .entry-header .entry-details {
   margin: 0;
 }
-.blog-area #main .post .entry-header .entry-details .sep {
+.blog-area #main .post .entry-header .entry-details .sep,
+#past-projects .entry-header .entry-details .sep {
   font-size: 0.8em;
 }
 .blog-area #main .post .entry-content img {
@@ -1208,6 +1213,10 @@ input[type="submit"]:hover {
 .page-id-1525 #top .section-content:first-of-type,
 .page-id-1543 #top .section-content:first-of-type {
   padding-top: 0 !important;
+}
+.page-id-1525 #top .section-content .wp-image-572,
+.page-id-1543 #top .section-content .wp-image-572 {
+  padding: 3em 0;
 }
 .front-page #top-home .top-logo {
   margin: 2em auto;
@@ -1574,36 +1583,14 @@ input[type="submit"]:hover {
 .wdpu-msg-inner .wdpu-buttons:active .wdpu-cta {
   color: #fff;
 }
+#past-projects {
+  width: 80%;
+  max-width: 64em;
+  position: relative;
+  margin: 0 auto 0 auto;
+}
 #past-projects .section-title {
   text-align: center;
-}
-#past-projects .past-projects-list {
-  text-align: justify;
-  padding-left: 0;
-  text-align: center;
-}
-#past-projects .past-projects-list::after {
-  width: 100%;
-  display: inline-block;
-  content: '';
-}
-#past-projects .past-projects-list .past-project {
-  width: 48%;
-  display: inline-block;
-  vertical-align: top;
-}
-#past-projects .past-projects-list .past-project:nth-of-type(odd) {
-  margin-right: 1%;
-}
-#past-projects .past-projects-list .past-project:nth-of-type(even) {
-  margin-left: 1%;
-}
-#past-projects .past-projects-list .past-project .entry-title {
-  font-size: 1.2em;
-}
-#past-projects .past-projects-list .past-project .wp-post-image {
-  width: 100%;
-  height: auto;
 }
 .nf-form-title {
   text-align: center;
@@ -1853,15 +1840,31 @@ input[type="submit"]:hover {
     width: 100%;
     height: auto;
   }
-  #past-projects {
-    width: 80%;
+  #past-projects .past-projects-list {
+    text-align: justify;
+  }
+  #past-projects .past-projects-list::after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+  }
+  #past-projects .past-projects-list .post {
+    display: inline-block;
+    vertical-align: top;
+    transition: all 0.25s;
+    margin: 0 0 0 0.75em;
+  }
+  #past-projects .past-projects-list .post .entry-details {
+    padding-top: 0.5em;
+  }
+  #past-projects .past-projects-list .post .entry-details-sep {
+    width: 20%;
     max-width: 64em;
     position: relative;
-    margin: 0 auto 0 auto;
-  }
-  #past-projects .past-projects-list .past-project {
-    width: 23%;
-    margin: 0 1%;
+    margin: 0.5em auto 0.5em auto;
+    height: 2px;
+    border: none;
+    background: #000;
   }
   #join-society-benefits {
     width: 65%;

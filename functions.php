@@ -172,6 +172,11 @@ class RHD_Walker_Nav extends Walker_Nav_Menu {
 include_once( 'includes/rhd-admin-panel.php' );
 
 
+// wpautop fix for shortcode buffing
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 12);
+
+
 /* ==========================================================================
    Registrations, Theme Support, Thumbnails
    ========================================================================== */
@@ -659,26 +664,23 @@ function rhd_past_projects_shortcode( $atts, $content = null ) {
 		'posts_per_page' => $num_posts
 	);
 
-	$past_proj = get_posts( $args );
+	$past_proj = new WP_Query( $args );
+	
 
-	if ( $past_proj ) {
+	if ( $past_proj->have_posts() ) {
 		$output = '<h2 class="section-title">Past Projects</h2>';
-		$output .= '<ul class="past-projects-list">';
-
-		foreach ( $past_proj as $proj ) {
-			setup_postdata( $GLOBALS['post'] =& $proj );
-
-			$output .= '<li class="past-project">';
-
-			if ( has_post_thumbnail() )
-				$output .= '<a href="' . get_the_permalink() . '" rel="bookmark">' . get_the_post_thumbnail( get_the_id(), 'square' ) . '</a>';
-
-			$output .= '<a href="' . get_the_permalink() . '" rel="bookmark"><h3 class="entry-title">' . get_the_title() . '</h3></a>';
-			$output .= '</li><!-- .past-project -->';
+		$output .= '<div class="past-projects-list">';
+		
+		while ( $past_proj->have_posts() ) {
+			$past_proj->the_post();
+			
+			ob_start();
+			get_template_part( 'content' );
+			$output .= ob_get_clean();
 		}
-
-		$output .= '</ul><!-- #past-projects -->';
 	}
+	
+	$ouput = apply_filters('the_content', $output);
 
 	return $output;
 }
